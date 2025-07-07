@@ -27,7 +27,7 @@ body{
 .container{
     display: flex;
     flex-direction:column;
-    align-items: flex-start;
+    align-items: center;
     background-color: var(--White);
     border-radius: 1rem;
     margin:1rem 0.5rem;
@@ -38,6 +38,10 @@ body{
 }
 img{
     width:100%;
+    border-radius: 10px 10px 0px 0px;
+}
+.image2{
+    display:none;
 }
 
 .content{
@@ -111,9 +115,36 @@ span{
 
 
 @media (min-width: 768px){
+
+  button:hover{
+    background-color: var(--Green-700);
+    cursor: pointer;
+  }
+  body{
+    display: flex;
+    flex-direction: row;
+  }
   .container{
+    height:100vw;
     display: flex;
     flex-direction:row;
+    width: 50%;
+    height: 50%;
+    margin:none;
+    position:relative;
+    left:25%;
+    margin-top:12.5%;
   }
-  
-}
+  .image1{
+    display:none;
+  }
+  .image2{
+    display:block;
+  }
+  img{
+    display:block;
+    margin:auto;
+    object-fit: fill;
+    border-radius: 10px 0px 0px 10px;
+  }
+  }
